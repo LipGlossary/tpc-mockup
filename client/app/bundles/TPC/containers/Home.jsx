@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import _ from 'lodash';
+
 import Lorem from '../components/Lorem';
 
 export default class Home extends React.Component {
@@ -16,9 +17,9 @@ export default class Home extends React.Component {
     this.state = {
       sections: [
         <Lorem title='value proposition' />,
-        'writing groups',
-        'discussion groups',
-        'classes',
+        <Lorem title='writing groups' links={6} />,
+        <Lorem title='discussion groups' links={4} />,
+        <Lorem title='classes' links={5} />,
         <Lorem title='testimonials' />,
         <Lorem title='proof point 1' />,
         <Lorem title='proof point 2' />

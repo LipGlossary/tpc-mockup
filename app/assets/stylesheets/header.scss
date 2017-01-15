@@ -1,7 +1,19 @@
 .header__wrapper {
+
   img {
+    border-radius: 50%;
     height: 50px;
     margin-right: 0.5em;
     width: 50px;
+  }
+
+  .dropdown-menu {
+    left: unset;
+    right: 0;
+  }
+
+  button {
+    border: 0;
+    height: 50px;
   }
 }

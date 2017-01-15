@@ -1,1 +1,8 @@
-<%= react_component("Header", props: {}, prerender: false) %>
+<%= react_component(
+  "Header",
+  prerender: false,
+  props: {
+    loggedIn: logged_in?,
+    location: @rails_context[:location],
+  }
+) %>

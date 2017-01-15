@@ -20,7 +20,7 @@ export default class Home extends React.Component {
         <Lorem title='writing groups' links={6} />,
         <Lorem title='discussion groups' links={4} />,
         <Lorem title='classes' links={5} />,
-        <Lorem title='testimonials' />,
+        <Lorem title='testimonials' carousel={3} />,
         <Lorem title='proof point 1' />,
         <Lorem title='proof point 2' />
       ]
@@ -29,7 +29,9 @@ export default class Home extends React.Component {
 
   renderSections (sections) {
     return sections.map((section, index) => {
-      if (typeof section === 'string') return section;
+      if (typeof section === 'string') {
+        return <section key={index} className='row'>{ section }</section>;
+      }
       return React.cloneElement(section, { key: index });
     })
   };

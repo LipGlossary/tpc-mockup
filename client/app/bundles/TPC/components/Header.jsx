@@ -44,7 +44,9 @@ export default class Header extends React.Component {
     if (!loggedIn) {
       return (
         <li className='nav-item'>
-          <a className='nav-link' href='/login'>Log in</a>
+          <a href='#loginModal' className='nav-link' data-toggle='modal'>
+            Log in
+          </a>
         </li>
       );
     }
@@ -56,7 +58,7 @@ export default class Header extends React.Component {
         </a>
         <div className='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
           <a className='dropdown-item' href='/profile'>Profile</a>
-          <a className='dropdown-item' href='/logout'>Log out</a>
+          <a className='dropdown-item' rel='nofollow' data-method='post' href='/logout'>Log out</a>
         </div>
       </li>
     );
